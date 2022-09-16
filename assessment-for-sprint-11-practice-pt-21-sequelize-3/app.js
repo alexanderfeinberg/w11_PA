@@ -34,6 +34,43 @@ app.get("/items/:name", async (req,res) => {
 })
 
 
+app.put('/items/:id', async(req, res, next)=>{
+  // const {name, price, quantity, isUsed} = req.body;
+  const item  = await WarehouseItem.findByPk(req.params.id)
+
+  if(!item){
+    res.status(404)
+    return res.json({"message": "Warehouse Item not found"})
+  }
+
+  for(let key of Object.keys(req.body)){
+    item[key] = req.body[key]
+  }
+
+  await item.save()
+  res.json(item)
+
+})
+
+app.delete('/items/:id', async(req, res, next)=>{
+  const item = await WarehouseItem.findByPk(req.params.id);
+  console.log(item)
+
+  if(!item){
+    res.status(404)
+    return res.json({
+      "message": "Warehouse Item not found"
+    })
+  }
+  await item.destroy();
+
+  res.json({
+    "message": "Successfully deleted"
+  })
+})
+
+
+
 
 
 
