@@ -9,6 +9,56 @@ const { Superhero } = require('../models');
 
 const validSuperheros = [
   // Your code here
+  {
+    name: "NAME1",
+    alias: "alias1",
+    affiliation: "Avengers",
+    heightCm: 181,
+    isMutant: true,
+    race: "human",
+    universe: "Marvel",
+    releaseYear: 1991
+  },
+  {
+    name: "NAME2",
+    alias: "alias2",
+    affiliation: "Avengers",
+    heightCm: 182,
+    isMutant: true,
+    race: "human",
+    universe: "Marvel",
+    releaseYear: 1992
+  },
+  {
+    name: "NAME3",
+    alias: "alias3",
+    affiliation: "Avengers",
+    heightCm: 183,
+    isMutant: true,
+    race: "human",
+    universe: "Marvel",
+    releaseYear: 1993
+  },
+  {
+    name: "NAME4",
+    alias: "alias4",
+    affiliation: "Avengers",
+    heightCm: 184,
+    isMutant: true,
+    race: "human",
+    universe: "Marvel",
+    releaseYear: 1994
+  },
+  {
+    name: "NAME5",
+    alias: "alias5",
+    affiliation: "Avengers",
+    heightCm: 185,
+    isMutant: true,
+    race: "human",
+    universe: "Marvel",
+    releaseYear: 1995
+  }
 ];
 
 module.exports = {
