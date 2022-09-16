@@ -30,6 +30,12 @@ module.exports = (sequelize, DataTypes) => {
               throw new Error("error")
             }
           }
+          // for (let i = 2; i < value.length; i++) {
+          //   if (value[i].charCodeAt(0) < 48 ||
+          //       value[i].charCodeAt(0) > 57) {
+          //         throw new Error("error")
+          //   }
+          // }
         }
       }
     },
